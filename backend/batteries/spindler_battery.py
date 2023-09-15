@@ -1,6 +1,6 @@
 from abc import ABC
 
-from car import Car
+from models.car import Car
 
 class SpindlerBattery(Car, ABC):
 
