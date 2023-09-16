@@ -1,26 +1,40 @@
-from abc import ABC
+"""Import the Battery class from the battery module"""
+from battery import Battery
 
-from models.car import Car
+"""Import the add_years_to_date function from the utils module"""
+from utils import add_years_to_date
 
-class SpindlerBattery(Car, ABC):
 
-    """CONSTRUCTOR METHOD FOR spindler batteries"""
+class SpindlerBattery(Battery):
+    """
+    A concrete class representing Spindler batteries that inherit from the Battery class.
+    This class checks if the battery needs service based on service date criteria.
+    """
 
-    def __init__(self, last_service_date, current_date):
-        super().__init__(last_service_date)
+    def __init__(self, current_date, last_service_date):
+        """
+        Constructor for SpindlerBattery instances.
 
-        """"creates instances for current_date and last_service_date"""
+        Args:
+            current_date (datetime.date): The current date.
+            last_service_date (datetime.date): The date when the battery was last serviced.
+        """
         self.current_date = current_date
         self.last_service_date = last_service_date
 
-    """create service criteria for service prompt"""
-    def engine_should_be_serviced(self):
+    def needs_service(self):
+        """
+        Check if the battery needs service based on a service date criterion.
 
-        """"Calculate the difference in years between current_date and last_service_date"""
-        time_difference = self.current_date.year - self.last_service_date.year
+        Returns:
+            bool: True if the battery needs service, False otherwise.
+        """
+        date_which_battery_should_be_serviced_by = add_years_to_date(self.last_service_date, 2)
 
-        """check if diff is equal to 4 years"""
-        if time_difference == 2:
+        # Check if the date when the battery should be serviced is earlier than the current date
+        if date_which_battery_should_be_serviced_by < self.current_date:
             return True
         else:
             return False
+
+# This class represents a specific type of battery and inherits from the Battery class.
