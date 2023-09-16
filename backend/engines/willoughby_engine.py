@@ -22,7 +22,7 @@ class WilloughbyEngine(Engine):
         self.current_mileage = current_mileage
         self.last_service_mileage = last_service_mileage
 
-    def engine_should_be_serviced(self):
+    def needs_service(self):
         """
         Check if the engine should be serviced based on mileage criteria.
 

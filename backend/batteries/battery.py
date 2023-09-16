@@ -18,5 +18,3 @@ class Battery(ABC):
 
     def need_service(self):
         pass
-
-

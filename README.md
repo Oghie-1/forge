@@ -26,12 +26,10 @@
 <p>
 
         project/
-├── backend/
-│   └── model/
-│       ├── __init__.py
-│       └── ...
-├── engine/
-│   └── capulet_engine.py
-└── ...
+                ├── backend/
+                       └── <a href="./backend/batteries/">batteries/</a>
+                        └── <a href="./backend/engines/">engines</a>/
+                ├── __init__.py
+│       
 
 </p>

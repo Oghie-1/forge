@@ -19,7 +19,7 @@ class NubbinBattery(Battery):
         self.current_date = current_date
 
     @abstractmethod
-    def engine_should_be_serviced(self):
+    def needs_service(self):
         """
         Determine if the engine should be serviced based on the difference in years between
         the current date and the last service date.
