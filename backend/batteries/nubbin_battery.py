@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from abc import ABC, abstractmethod
 from datetime import datetime
-from battery import Battery
+from backend.batteries.battery import Battery
 
 
 class NubbinBattery(Battery):

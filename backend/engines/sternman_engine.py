@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from abc import ABC
 """Import the Engine class from the engine module"""
-from engine import Engine 
+from backend.engines.engine import Engine 
 
 
 class SternmanEngine(Engine):
@@ -21,7 +21,7 @@ class SternmanEngine(Engine):
         super().__init__(last_service_date)
         self.warning_light_is_on = warning_light_is_on
 
-    def engine_should_be_serviced(self):
+    def needs_service(self):
         """
         Check if the engine should be serviced based on the status of the warning light.
 

@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 
 """Import from the engine module"""
-from engines.capulet_engine import CapuletEngine
-from engines.sternman_engine import SternmanEngine
-from engines.willoughby_engine import WilloughbyEngine
+from backend.engines.capulet_engine import CapuletEngine
+from backend.engines.sternman_engine import SternmanEngine
+from backend.engines.willoughby_engine import WilloughbyEngine
 
 """Import battery module"""
-from batteries.nubbin_battery import NubbinBattery
-from batteries.spindler_battery import SpindlerBattery
+from backend.batteries.nubbin_battery import NubbinBattery
+from backend.batteries.spindler_battery import SpindlerBattery
 
 """Import car module"""
-from car import Car
+from backend.car import Car
 
 
 

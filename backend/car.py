@@ -2,7 +2,7 @@
 
 """Import the Serviceable abstract class"""
 
-from serviceable import Serviceable
+from backend.serviceable import Serviceable
 
 
 class Car(Serviceable):
