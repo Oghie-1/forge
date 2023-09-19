@@ -12,7 +12,7 @@ from backend.batteries.spindler_battery import SpindlerBattery
 """Import car module"""
 from backend.car import Car
 
-
+last_service_mileage = 35000
 
 class carFactory(Car):
     """

@@ -17,6 +17,8 @@ if __name__ == "__main__":
     
     """
     # Example usage
+
+
     current_date = 16/11/2023
     last_service_date = 1/14/2019
     current_mileage = 45000
@@ -26,12 +28,6 @@ if __name__ == "__main__":
     # Create different car models using the carFactory
 
     calliope_car = carFactory.create_calliope(current_date, last_service_date, current_mileage, last_service_mileage)
-
-    models = calliope_car
-    
-    def std_output(models):
-        for items in calliope_car:
-            print(items, end=" ")
     
     print("\nCar model created: {}")
     glissade_car = carFactory.create_glissade(
