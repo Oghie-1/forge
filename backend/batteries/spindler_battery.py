@@ -4,6 +4,7 @@
 """Import the Battery class from the battery module"""
 from backend.batteries.battery import Battery
 
+
 """Import the add_years_to_date function from the utils module"""
 from backend.utils import add_years_to_date
 
@@ -32,7 +33,7 @@ class SpindlerBattery(Battery):
         Returns:
             bool: True if the battery needs service, False otherwise.
         """
-        date_which_battery_should_be_serviced_by = add_years_to_date(self.last_service_date, 2)
+        date_which_battery_should_be_serviced_by = add_years_to_date(self.last_service_date, 3)
 
         # Check if the date when the battery should be serviced is earlier than the current date
         if date_which_battery_should_be_serviced_by < self.current_date:
